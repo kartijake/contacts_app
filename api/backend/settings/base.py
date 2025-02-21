@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     "corsheaders",
     "apps.contacts",
     "apps.user_auth",
-    "rest_framework_simplejwt"
+    "rest_framework_simplejwt",
+    "drf_spectacular"
 ]
 
 
@@ -92,6 +93,14 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 5, 
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Contacts API",
+    "DESCRIPTION": "API documentation for the Contacts app",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
 }
 
 SIMPLE_JWT = {
