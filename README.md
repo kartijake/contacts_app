@@ -179,7 +179,7 @@ sudo apt install -y docker-compose
 
 ```sh
 git clone https://github.com/kartijake/contacts_app.git
-cd contacts_app
+cd contacts_app/docker
 docker-compose up --build -d
 ```
 
